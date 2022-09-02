@@ -5,7 +5,6 @@ import { Responsive, WidthProvider, Layouts, Layout } from "react-grid-layout";
 import { v4 as uuid } from "uuid";
 
 import GridItem from "./GridItem";
-import useWindowSize from "../../utils/useWindowSize";
 import {
   Item,
   KeysOfBreakpoints,
@@ -15,6 +14,9 @@ import {
   DEFAULT_ITEM_HEIGHT,
   Coordinates,
 } from "./model";
+import Button from "../../shared/Button";
+import { useWindowSize } from "react-use";
+import Page from "../../shared/Page";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 const initialItems: Item[] = [
@@ -22,8 +24,6 @@ const initialItems: Item[] = [
   { id: "2" },
   { id: "3", width: 2, height: 3 },
   { id: "4" },
-  { id: "5" },
-  { id: "6" },
 ];
 
 const InventoryGrid = () => {
@@ -98,15 +98,10 @@ const InventoryGrid = () => {
   };
 
   return (
-    <div>
+    <Page>
       <h1>InventoryGrid</h1>
       <div>
-        <button
-          onClick={onAddItem}
-          style={{ padding: "0.5rem 1rem", fontSize: 24 }}
-        >
-          Add item
-        </button>
+        <Button onClick={onAddItem}>Add item</Button>
       </div>
       <div>
         <ResponsiveGridLayout
@@ -125,7 +120,7 @@ const InventoryGrid = () => {
           ))}
         </ResponsiveGridLayout>
       </div>
-    </div>
+    </Page>
   );
 };
 
