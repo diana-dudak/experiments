@@ -1,11 +1,7 @@
 import React from "react";
 import { NavLink as Link } from "react-router-dom";
 import "./index.scss";
-
-const pages = [
-  { name: "Canvas", path: "canvas" },
-  { name: "Invetory Grid", path: "inventoryGrid" },
-];
+import { pages } from "./pages";
 
 const Nav = () => {
   return (

@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Nav from "./shared/Nav";
 import InventoryGrid from "./pages/inventoryGrid";
 import Canvas from "./pages/canvas";
+import DevProdMode from "./pages/devProdMode";
+import ImagesUnknownAmmount from "./pages/imagesUnknownAmmount";
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
           <Routes>
             <Route path="inventoryGrid" element={<InventoryGrid />} />
             <Route path="canvas" element={<Canvas />} />
+            <Route path="devProdMode" element={<DevProdMode />} />
+            <Route path="imagesUnknownAmmount" element={<ImagesUnknownAmmount />} />
             {/* No match route */}
-            <Route path="*" element={<Navigate to="canvas" replace />} />
+            <Route path="*" element={<Navigate to="devProdMode" replace />} />
           </Routes>
         </div>
       </BrowserRouter>

@@ -1,0 +1,21 @@
+.DevProdMode {
+  &__table {
+    margin-top: 20px;
+    border-collapse: collapse;
+
+    td {
+      border: 1px solid var(--color-dark);
+      padding: 2px 4px;
+      font-family: monospace;
+      font-size: 16px;
+    }
+
+    td + td {
+      text-align: right;
+    }
+
+    thead {
+      font-weight: bolder;
+    }
+  }
+}
