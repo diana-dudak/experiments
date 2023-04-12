@@ -43,6 +43,7 @@
     color: var(--color-dark);
     padding: 4px 8px;
     line-height: 1;
+    border-radius: var(--border-radius);
 
     &:hover {
       color: var(--color-text);
@@ -50,7 +51,6 @@
 
     &.is-active {
       background-color: rgba(22, 22, 29, 0.1);
-      border-radius: 4px;
     }
   }
 }

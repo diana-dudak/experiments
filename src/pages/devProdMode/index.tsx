@@ -4,7 +4,7 @@ import "./index.scss"
 
 const DevProdMode = () => {
   return (
-    <Page>
+    <Page className="DevProdMode">
       <h1>Dev/Prod Mode</h1>
       <code>
         Current mode is: <b>{process.env.NODE_ENV}</b>

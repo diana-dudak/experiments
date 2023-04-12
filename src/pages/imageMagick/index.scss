@@ -1,0 +1,48 @@
+.ImageMagick {
+  font-size: 18px;
+
+  &__list {
+    margin: 1rem 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    &+& {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    border-bottom: var(--color-light) solid 2px;
+    font-weight: bold;
+  }
+
+  &__value {
+    border-radius: 8px;
+    border: var(--border);
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+  }
+
+  &__canvas {
+    border: var(--border);
+    border-radius: var(--border-radius);
+  }
+
+  &__preview {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    max-width: 100%;
+    overflow: auto;
+
+    >* {
+      max-width: 405px;
+      max-height: 720px;
+    }
+  }
+}

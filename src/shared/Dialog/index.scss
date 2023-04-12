@@ -1,0 +1,37 @@
+.Dialog {
+    --spacing: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: var(--z-dialog);
+
+    &__backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-text);
+        opacity: 0.25;
+    }
+
+    &__container {
+        position: relative;
+        margin: calc(2 * var(--spacing)) var(--spacing);
+        width: calc(100vw - 2 * var(--spacing));
+        height: calc(100vh - 4 * var(--spacing));
+
+        border-radius: var(--border-radius);
+        border: none;
+
+        overflow: auto;
+    }
+
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}

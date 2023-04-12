@@ -5,6 +5,8 @@ import InventoryGrid from "./pages/inventoryGrid";
 import Canvas from "./pages/canvas";
 import DevProdMode from "./pages/devProdMode";
 import ImagesUnknownAmmount from "./pages/imagesUnknownAmmount";
+import { PAGE } from "./shared/Nav/pages";
+import ImageMagick from "./pages/imageMagick";
 
 function App() {
   return (
@@ -13,12 +15,19 @@ function App() {
         <Nav />
         <div className="App__body">
           <Routes>
-            <Route path="inventoryGrid" element={<InventoryGrid />} />
-            <Route path="canvas" element={<Canvas />} />
-            <Route path="devProdMode" element={<DevProdMode />} />
-            <Route path="imagesUnknownAmmount" element={<ImagesUnknownAmmount />} />
+            <Route path={PAGE.inventoryGrid} element={<InventoryGrid />} />
+            <Route path={PAGE.canvas} element={<Canvas />} />
+            <Route path={PAGE.devProdMode} element={<DevProdMode />} />
+            <Route
+              path={PAGE.imagesUnknownAmmount}
+              element={<ImagesUnknownAmmount />}
+            />
+            <Route path={PAGE.imageMagick} element={<ImageMagick />} />
             {/* No match route */}
-            <Route path="*" element={<Navigate to="devProdMode" replace />} />
+            <Route
+              path="*"
+              element={<Navigate to={PAGE.imageMagick} replace />}
+            />
           </Routes>
         </div>
       </BrowserRouter>

@@ -8,8 +8,10 @@ interface Props {
 }
 
 const Button = (props: Props) => {
+  let className = "" || props.className;
+  
   return (
-    <button {...props} className={`Button ${props.className}`}>
+    <button {...props} className={`Button ${className}`}>
       {props.children}
     </button>
   );

@@ -3,8 +3,17 @@
   --color-container: rgb(242, 242, 242);
   --color-text: rgb(27, 27, 27);
   --color-dark: rgb(84, 84, 84);
+  --color-light: rgb(186, 186, 186);
+  --color-lighter: rgb(229, 229, 229);
+  
+  --color-primary: rgb(255 79 163);
 
   --z-nav: 100;
+  --z-dialog: 200;
 
   --header-height: 42px;
+
+  --border-radius: 4px;
+
+  --border: 2px solid var(--color-dark);
 }

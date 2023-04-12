@@ -17,6 +17,11 @@ code {
 
 * {
   box-sizing: border-box;
+  
+  &:focus-visible {
+    outline: 2px dashed var(--color-primary);
+    outline-offset: 2px;
+  }
 }
 
 .App {
