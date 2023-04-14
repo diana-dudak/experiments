@@ -6,8 +6,26 @@
   background-color: var(--color-container);
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     background-color: var(--color-lighter);
+  }
 
+  &:active {
+    background-color: var(--color-light);
+  }
+
+  &[disabled] {
+    border-color: var(--color-light);
+    color: var(--color-light);
+    cursor: default;
+
+    &:hover,
+    &:active {
+      background-color: var(--color-container);
+    }
+  }
+
+  &[title] {
+    cursor: help;
   }
 }

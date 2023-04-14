@@ -1,8 +1,16 @@
 .Input {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
+  width: 100%;
   font-size: 24px;
   border-width: 2px;
   border-color: var(--color-dark);
   border-radius: var(--border-radius);
   cursor: pointer;
+
+  &[type="color"] {
+    background-color: var(--color-bg);
+    padding: 0.25rem 0.5rem;
+    height: 48px;
+    width: 48px;
+  }
 }

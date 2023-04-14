@@ -1,0 +1,13 @@
+.FormField {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__field {
+    margin-top: auto;
+  }
+}

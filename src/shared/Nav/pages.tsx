@@ -4,9 +4,11 @@ export const PAGE = {
   devProdMode: "devProdMode",
   imagesUnknownAmmount: "imagesUnknownAmmount",
   imageMagick: "imageMagick",
+  gradient: "gradient",
 };
 
 export const pages = [
+  { name: "Gradients", path: PAGE.gradient },
   { name: "Canvas", path: PAGE.canvas },
   { name: "Invetory Grid", path: PAGE.inventoryGrid },
   { name: "Dev/Prod Mode", path: PAGE.devProdMode },

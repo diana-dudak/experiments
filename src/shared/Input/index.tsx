@@ -1,14 +1,17 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import "./index.scss";
+import FormField from "../FormField";
 
-type Any = any;
-
-interface Props extends Any {
-  className?: string;
+interface Props extends React.ComponentPropsWithoutRef<"input"> {
+  label?: string | ReactElement;
 }
 
 const Input = (props: Props) => {
-  return <input {...props} className={`Input ${props.className}`} />;
+  return (
+    <FormField label={props.label} name={props.name}>
+      <input {...props} className={`Input ${props.className ?? ""}`} />
+    </FormField>
+  );
 };
 
 export default Input;

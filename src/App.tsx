@@ -7,6 +7,9 @@ import DevProdMode from "./pages/devProdMode";
 import ImagesUnknownAmmount from "./pages/imagesUnknownAmmount";
 import { PAGE } from "./shared/Nav/pages";
 import ImageMagick from "./pages/imageMagick";
+import Gradient from "./pages/gradient";
+
+const DEFAULT_PAGE = PAGE.canvas;
 
 function App() {
   return (
@@ -15,6 +18,7 @@ function App() {
         <Nav />
         <div className="App__body">
           <Routes>
+            <Route path={PAGE.gradient} element={<Gradient />} />
             <Route path={PAGE.inventoryGrid} element={<InventoryGrid />} />
             <Route path={PAGE.canvas} element={<Canvas />} />
             <Route path={PAGE.devProdMode} element={<DevProdMode />} />
@@ -26,7 +30,7 @@ function App() {
             {/* No match route */}
             <Route
               path="*"
-              element={<Navigate to={PAGE.imageMagick} replace />}
+              element={<Navigate to={DEFAULT_PAGE} replace />}
             />
           </Routes>
         </div>
