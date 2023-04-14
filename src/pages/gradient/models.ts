@@ -43,8 +43,8 @@ const defaultGradient: GradientLayer = {
   type: GradientType.linear,
   id: "gradientLayer0",
   colorStops: [
-    { color: "#ffaaaa", id: "colorStop0" },
-    { color: "#aaaaff", id: "colorStop1" },
+    { color: "#ffffff", id: "colorStop0" },
+    { color: "#ffa3d0", id: "colorStop1" },
   ],
 };
 
@@ -52,7 +52,19 @@ enum MeasurmentUnit {
   "%" = "%",
   "px" = "px",
   "rem" = "rem",
+  "em" = "em",
+  "vh" = "vh",
+  "vw" = "vw",
 }
+
+const measurmentUnitOptions = [
+  { value: MeasurmentUnit["%"] },
+  { value: MeasurmentUnit.px },
+  { value: MeasurmentUnit.rem },
+  { value: MeasurmentUnit.em },
+  { value: MeasurmentUnit.vw },
+  { value: MeasurmentUnit.vh },
+];
 
 export {
   type ColorStopConfig,
@@ -62,4 +74,5 @@ export {
   gradientTypeOptions,
   defaultGradient,
   MeasurmentUnit,
+  measurmentUnitOptions,
 };

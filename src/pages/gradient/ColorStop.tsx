@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "../../shared/Button";
 import Input from "../../shared/Input";
-import { hexTransparencies } from "./hexTransparencies";
 import { ColorStopConfig } from "./models";
 import FormField from "../../shared/FormField";
 
